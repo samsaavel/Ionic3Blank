@@ -1,14 +1,33 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title align-title="center">LOGIN</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="wrapper">
+  <h1 align-h1="center">Curso Inonic 3</h1>
+    <br>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input [(ngModel)]="user"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Grupo</ion-label>
+          <ion-input [(ngModel)]="group"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Money</ion-label>
+            <ion-input [(ngModel)]="money"></ion-input>
+          </ion-item>
+      </ion-list>
+      
+      <button ion-button color="dark" (click)="goAbout()">About</button>
+      
+  </div>
 </ion-content>
+
+

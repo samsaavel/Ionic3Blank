@@ -1,0 +1,28 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title align-title="center">{{user | pipes}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{data.date | date:'dd MMMM yyyy'}}</h1>
+  <br>
+  <h1>Cantidad {{data.money | number:'3.5'}}</h1>
+  <br>  
+    <div>
+        <h1>Cursos</h1>
+    </div>
+    <ion-select *ngFor= "let course of data.course; let i = index">{{course}} - {{i}}>
+      <ion-label [color]="colorLabel">{{course}}</ion-label>
+    </ion-select>
+    <button ion-button (click)="goback()" color="primary">Back</button>
+    <button ion-button (click)="gobackHome()" color="primary">Logout</button>
+    <button ion-button [color]="colorLabel" (click)="goMy()">My Page</button>
+    
+</ion-content>
